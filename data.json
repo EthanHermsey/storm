@@ -1,0 +1,44 @@
+{
+    "title": "Ontdek welke manier van reizen het beste bij jou past.",
+    "comment": "Hoe maak jij het liefste jou reis? Vul de vragen in om daar achter te komen.",
+    "catdefiningResults": {"0": "actief", "1": "relaxed"},
+    "catResults": {
+        "actief": [
+            {"type": "voet.", "comment": "Je omgeving in je op kunnen nemen terwijl je wandelt."}, 
+            {"type": "fiets.", "comment": "Je kunt je snel verplaatsen en bent actief bezig."}, 
+            {"type": "tandem.", "comment": "Samen op de tandem. Efficient lange afstanden afleggen."}, 
+            {"type": "groepsfiets.", "comment": "Gezellig met een groep om tafel en trappen tot je niet meer kunt."}
+        ]
+    },
+    "catDefiningVragen":[
+        {
+            "name": "inspanning",
+            "q":"Hoeveel inspanning zou je in de reis willen steken?", 
+            "a": [
+                {"type": "radio", "txt": "Een middelmatige tot hoge inspanning.", "weight" : 0},
+                {"type": "radio", "txt": "Een lage tot middelmatige", "weight" : 1}
+            ]
+        }
+    ],
+    "catItemOrder": [
+        ["tijd", "aantal"],
+        ["aantal", "activiteit"]
+    ],
+    "catVragen":[
+        {
+            "name": "tijd",
+            "q":"Hoeveel tijd zou je in de reis willen steken?", 
+            "a": [
+                {"type": "radio", "txt": "Maakt niet uit, ik wil van de reis genieten.", "weight" : 0},
+                {"type": "radio", "txt": "Ik wil graag snel langere afstanden reizen.", "weight" : 1}
+            ]
+        },
+        {
+            "name": "aantal",
+            "q":"Met hoeveel personen ga je reizen?",
+            "a": [
+                {"type": "range", "options": {"min": "0", "max": "4", "value": "0"}, "txt": ["Ik reis alleen.", "Ik reis met 2 personen.", "Ik reis met 3 personen.", "Ik reis met 4 personen.", "Ik reis met meer dan 4 personen."]}
+            ]
+        }
+    ]
+}

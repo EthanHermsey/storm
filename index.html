@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="keuzeform" onsubmit="return false">
+            <h2 id="title">Ontdek welke manier van reizen het beste bij jou past.</h2>
+            <div id="start" class="item">
+                <p id="comment">Welk vervoers middel zou voor jou reis het beste zijn? Vul de vragen in om daar achter te komen.</p>
+                <h4>Hoeveel inspanning zou je in de reis willen steken?</h4>
+                <label>
+                    <input type="radio" name="inspanning" id="inspanningHoog" value="1" checked=true>
+                    <div class="fakeRadio"></div>
+                    Een middelmatige tot hoge inspanning.
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="inspanning" id="inspanningLaag" value="2">
+                    <div class="fakeRadio"></div>
+                    Een lage tot middelmatige inspanning.
+                </label>              
+            </div>
+            <div id="tijd" class="item hidden">
+                <h4>Hoeveel tijd zou je in de reis willen steken?</h4>
+                <label>
+                    <input type="radio" name="tijd" id="tijdHoog" value="1" checked="true">
+                    <div class="fakeRadio"></div>
+                    Maakt niet uit, ik wil van de reis genieten.
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="tijd" id="tijdLaag" value="0">
+                    <div class="fakeRadio"></div>
+                    Ik wil graag snel langere afstanden reizen.
+                </label>
+            </div>
+            <div id="aantal" class="item hidden">
+                <h4>Met hoeveel personen ga je reizen?</h4>
+                <input type="range" name="aantalpersonen" id="aantalpersonen" min="0" max="4" value="0" oninput="updateSliderLabel(this)"><br>
+                <label id="sliderLabel" for="aantalpersonen">Ik reis alleen.</label>
+            </div>
+            <div id="activiteit" class="item hidden">
+            
+                <h4>Hoe besteed je de reis het liefste?</h4>
+                <label>
+                    <input type="radio" name="activiteit" id="actiefHoog" value="2" checked="true">
+                    <div class="fakeRadio"></div>
+                    Ik wil graag lezen, studeren of een conversatie aangaan.
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="activiteit" id="actiefLaag"  value="1">
+                    <div class="fakeRadio"></div>
+                    Ik wil graag luisteren naar muziek of me concentreren op de reis.
+                </label>
+            </div>
+            <div id="einde" class="item hidden">
+                <h4>Volgens de uitkomst van de vragen kun jij het beste:</h4>
+                <p id="resultaat"></p>
+                <p id="resComment"></p>
+            </div>
+            <div id="btnContainer">
+                <button id="btnVorige" class="hidden">Vorige</button>
+                <button id="btnVolgende">Volgende</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
